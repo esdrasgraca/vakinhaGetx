@@ -5,6 +5,7 @@ import 'package:vakinha_burger_mobile/app/core/bindings/application_bindings.dar
 import 'package:vakinha_burger_mobile/app/core/ui/vakinha_ui.dart';
 import 'package:vakinha_burger_mobile/app/routes/auth_routers.dart';
 import 'package:vakinha_burger_mobile/app/routes/home_routers.dart';
+import 'package:vakinha_burger_mobile/app/routes/product_routers.dart';
 import 'package:vakinha_burger_mobile/app/routes/splash_routers.dart';
 
 void main() async {
@@ -25,6 +26,7 @@ class VakinhaBurgerApp extends StatelessWidget {
         ...SplashRouters.routers,
         ...AuthRouters.routers,
         ...HomeRouters.routers,
+        ...ProductRouters.routers,
       ],
     );
   }
