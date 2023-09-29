@@ -6,6 +6,8 @@ import 'package:vakinha_burger_mobile/app/core/services/auth_service.dart';
 import 'package:vakinha_burger_mobile/app/core/services/shopping_card_service.dart';
 import 'package:vakinha_burger_mobile/app/modules/menu/menu_bindings.dart';
 import 'package:vakinha_burger_mobile/app/modules/menu/menu_page.dart';
+import 'package:vakinha_burger_mobile/app/modules/order/shopping_card/shopping_card_bindings.dart';
+import 'package:vakinha_burger_mobile/app/modules/order/shopping_card/shopping_card_page.dart';
 
 class HomeController extends GetxController {
   
@@ -39,14 +41,19 @@ class HomeController extends GetxController {
     if(settings.name == '/menu') {
       return GetPageRoute(
         settings: settings,
-        page: () => MenuPage(),
+        page: () => const MenuPage(),
         binding: MenuBindings(),
         transition: Transition.fadeIn,
       );
     }
 
     if(settings.name == '/order/shopping_card') {
-      
+      return GetPageRoute(
+        settings: settings,
+        page: () => const ShoppingCardPage(),
+        binding: ShoppingCardBindings(),
+        transition: Transition.fadeIn,
+      );
     }
   }
 }
